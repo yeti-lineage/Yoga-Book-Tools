@@ -1,0 +1,1 @@
+loglevel=2 androidboot.hardware=r2_cht_ffd firmware_class.path=/system/etc/firmware bootboost=1 pm_suspend_debug=1 memmap=4M$0x5c400000 intel_pstate=disable vga=current i915.modeset=1 drm.vblankoffdelay=1 i915.fastboot=1 thermal.off=1 pstore.backend=ramoops intel_pstore_pram.record_size=0x8000
