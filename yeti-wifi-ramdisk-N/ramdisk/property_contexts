@@ -1,0 +1,180 @@
+#line 1 "system/sepolicy/property_contexts"
+##########################
+# property service keys
+#
+#
+net.rmnet               u:object_r:net_radio_prop:s0
+net.gprs                u:object_r:net_radio_prop:s0
+net.ppp                 u:object_r:net_radio_prop:s0
+net.qmi                 u:object_r:net_radio_prop:s0
+net.lte                 u:object_r:net_radio_prop:s0
+net.cdma                u:object_r:net_radio_prop:s0
+net.dns                 u:object_r:net_radio_prop:s0
+sys.usb.config          u:object_r:system_radio_prop:s0
+ril.                    u:object_r:radio_prop:s0
+ro.ril.                 u:object_r:radio_prop:s0
+gsm.                    u:object_r:radio_prop:s0
+persist.radio           u:object_r:radio_prop:s0
+
+net.                    u:object_r:system_prop:s0
+dev.                    u:object_r:system_prop:s0
+ro.runtime.             u:object_r:system_prop:s0
+hw.                     u:object_r:system_prop:s0
+ro.hw.                  u:object_r:system_prop:s0
+sys.                    u:object_r:system_prop:s0
+sys.cppreopt            u:object_r:cppreopt_prop:s0
+sys.powerctl            u:object_r:powerctl_prop:s0
+sys.usb.ffs.            u:object_r:ffs_prop:s0
+service.                u:object_r:system_prop:s0
+wlan.                   u:object_r:system_prop:s0
+dhcp.                   u:object_r:dhcp_prop:s0
+dhcp.bt-pan.result      u:object_r:pan_result_prop:s0
+bluetooth.              u:object_r:bluetooth_prop:s0
+
+debug.                  u:object_r:debug_prop:s0
+debug.db.               u:object_r:debuggerd_prop:s0
+dumpstate.              u:object_r:dumpstate_prop:s0
+log.                    u:object_r:log_prop:s0
+log.tag                 u:object_r:log_tag_prop:s0
+log.tag.WifiHAL         u:object_r:wifi_log_prop:s0
+security.perf_harden    u:object_r:shell_prop:s0
+service.adb.root        u:object_r:shell_prop:s0
+service.adb.tcp.port    u:object_r:shell_prop:s0
+
+persist.audio.          u:object_r:audio_prop:s0
+persist.debug.          u:object_r:persist_debug_prop:s0
+persist.logd.           u:object_r:logd_prop:s0
+persist.logd.security   u:object_r:device_logging_prop:s0
+persist.logd.logpersistd        u:object_r:logpersistd_logging_prop:s0
+logd.logpersistd        u:object_r:logpersistd_logging_prop:s0
+persist.log.tag         u:object_r:log_tag_prop:s0
+persist.mmc.            u:object_r:mmc_prop:s0
+persist.sys.            u:object_r:system_prop:s0
+persist.sys.safemode    u:object_r:safemode_prop:s0
+ro.sys.safemode         u:object_r:safemode_prop:s0
+persist.sys.audit_safemode      u:object_r:safemode_prop:s0
+persist.service.        u:object_r:system_prop:s0
+persist.service.bdroid. u:object_r:bluetooth_prop:s0
+persist.security.       u:object_r:system_prop:s0
+
+# Boolean property set by system server upon boot indicating
+# if device owner is provisioned.
+ro.device_owner         u:object_r:device_logging_prop:s0
+
+# selinux non-persistent properties
+selinux.restorecon_recursive   u:object_r:restorecon_prop:s0
+selinux.                       u:object_r:security_prop:s0
+
+# default property context
+*                       u:object_r:default_prop:s0
+
+# data partition encryption properties
+vold.                   u:object_r:vold_prop:s0
+ro.crypto.              u:object_r:vold_prop:s0
+
+# ro.build.fingerprint is either set in /system/build.prop, or is
+# set at runtime by system_server.
+ro.build.fingerprint    u:object_r:fingerprint_prop:s0
+
+# ctl properties
+ctl.bootanim            u:object_r:ctl_bootanim_prop:s0
+ctl.dumpstate           u:object_r:ctl_dumpstate_prop:s0
+ctl.fuse_               u:object_r:ctl_fuse_prop:s0
+ctl.mdnsd               u:object_r:ctl_mdnsd_prop:s0
+ctl.ril-daemon          u:object_r:ctl_rildaemon_prop:s0
+ctl.bugreport           u:object_r:ctl_bugreport_prop:s0
+ctl.console             u:object_r:ctl_console_prop:s0
+ctl.                    u:object_r:ctl_default_prop:s0
+
+# NFC properties
+nfc.                    u:object_r:nfc_prop:s0
+
+# These properties are not normally set by processes other than init.
+# They are only distinguished here for setting by qemu-props on the
+# emulator/goldfish.
+config.                 u:object_r:config_prop:s0
+ro.config.              u:object_r:config_prop:s0
+dalvik.                 u:object_r:dalvik_prop:s0
+ro.dalvik.              u:object_r:dalvik_prop:s0
+#line 1 "out/target/product/r2_cht_ffd/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+
+#line 1 "device/intel/sepolicy/lenovo_sn/property_contexts"
+
+#for lenovo_sn prop
+ro.lenovosn2  u:object_r:lenovo_sn_prop:s0
+
+gsm.sn1  u:object_r:lenovo_sn_prop:s0
+
+persist.backgrounddata.     u:object_r:system_prop:s0
+
+#line 1 "out/target/product/r2_cht_ffd/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+
+#line 1 "device/intel/sepolicy/dolby/property_contexts"
+# This file was modified by Dolby Laboratories, Inc. The portions of the
+# code that are surrounded by "DOLBY..." are copyrighted and
+# licensed separately, as follows:
+#
+#  (C) 2014-2016 Dolby Laboratories, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# DOLBY_START
+dolby.                  u:object_r:dolby_prop:s0
+# DOLBY_END
+
+#line 1 "out/target/product/r2_cht_ffd/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+
+#line 1 "device/intel/sepolicy/widi/property_contexts"
+widi         u:object_r:widi_prop:s0
+media.widi   u:object_r:widi_prop:s0
+#line 1 "out/target/product/r2_cht_ffd/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+
+#line 1 "device/intel/sepolicy/audio/coe-common/property_contexts"
+AudioComms.    u:object_r:audio_prop:s0
+#line 1 "out/target/product/r2_cht_ffd/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+
+#line 1 "device/intel/sepolicy/camera/property_contexts"
+camera.           u:object_r:camera_prop:s0
+#line 1 "out/target/product/r2_cht_ffd/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+
+#line 1 "device/intel/sepolicy/camera/ipu2/property_contexts"
+camera.flash.throttling_levels      u:object_r:cam_flash_thrtl_prop:s0
+#line 1 "out/target/product/r2_cht_ffd/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+
+#line 1 "device/intel/sepolicy/tcplog/property_contexts"
+persist.service.tcplog.       u:object_r:tcplog_prop:s0
+#line 1 "out/target/product/r2_cht_ffd/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+
+#line 1 "device/intel/sepolicy/gps/bcm4752/property_contexts"
+# property for gpsd
+persist.gps. u:object_r:gps_prop:s0
+spid.gps.    u:object_r:gps_prop:s0
+ctl.gpsd     u:object_r:gps_prop:s0
+#line 1 "out/target/product/r2_cht_ffd/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+
+#line 1 "device/intel/sepolicy/crashlogd/property_contexts"
+# user changable crashlogd properties
+crashlogd.           u:object_r:crashlogd_prop:s0
+persist.crashlogd.           u:object_r:persist_crashlogd_prop:s0
+ctl.logsystemstate         u:object_r:ctl_logsystemstate_prop:s0
+#line 1 "out/target/product/r2_cht_ffd/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+
+#line 1 "device/intel/sepolicy/debug-phonedoctor/property_contexts"
+ctl.logconfig   u:object_r:ctl_logconfig_prop:s0
+#line 1 "out/target/product/r2_cht_ffd/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+
+#line 1 "device/intel/sepolicy/power/property_contexts"
+# property for power HAL
+sys.power_hal.          u:object_r:system_power_hal_prop:s0
+#line 1 "out/target/product/r2_cht_ffd/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+
